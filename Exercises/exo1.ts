@@ -1,5 +1,4 @@
 /*
-Source :  https://typescript-exercises.github.io/#exercise=5&file=%2Fnode_modules%2Ftype-assertions%2Findex.ts
 Welcome to:
 
     ................................................................
