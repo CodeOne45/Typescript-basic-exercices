@@ -1,3 +1,39 @@
+/*
+The tsconfig.json file corresponds to the configuration 
+of the TypeScript compiler (tsc).
+
+
+tsconfig.json signifies the directory in which 
+it is kept is the root of TypeScript project. 
+The tsconfig.json file specifies the root files 
+and the compiler options required to compile the project.
+
+The compiler is expected to execute as 
+per the configurations mentioned:
+
+"target": "es5" => will compile the 
+es6 to es5 so that it is compatible browsers.
+
+"module": "system" => specifies the module code generations 
+(commonjs', 'amd', 'system', 'umd', 'es6' etc)
+
+"moduleResolution": "node" => Determine how modules get resolved
+
+"sourceMap": true => Generates corresponding ‘.map’ file 
+so that it can be used in the production code for debugging.
+
+"removeComments": false => Remove all comments except 
+copy-right header comments beginning with /*!
+
+"noImplicitAny": false => Raise error on expressions 
+and declarations with an implied ‘any’ type.
+
+If the "exclude" property is specified, the compiler includes 
+all TypeScript (*.ts or *.tsx) files in the containing directory 
+and subdirectories except for those files or folders that are excluded.
+
+*/
+
 {
   "compilerOptions": {
     "target": "es5",
