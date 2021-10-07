@@ -1,5 +1,13 @@
 /*
+Intro:
 
+    All  2 users created liked the idea of the community. We should go
+    forward and introduce some order. Let's add a couple of admins.
+
+    Initially we only had users in the in-memory database. After
+    introducing Admins, we need to fix the types so that
+    everything works well together.
+    
 Exercise:
 
     Type "Person" is missing, please define it and use
@@ -9,44 +17,44 @@ Exercise:
 */
 
 interface User {
-    name: string;
-    age: number;
-    occupation: string;
+  name: string;
+  age: number;
+  occupation: string;
 }
 
 interface Admin {
-    name: string;
-    age: number;
-    role: string;
+  name: string;
+  age: number;
+  role: string;
 }
 
 export type Person = unknown;
 
 export const persons: User[] /* <- Person[] */ = [
-    {
-        name: 'Max Mustermann',
-        age: 25,
-        occupation: 'Chimney sweep'
-    },
-    {
-        name: 'Jane Doe',
-        age: 32,
-        role: 'Administrator'
-    },
-    {
-        name: 'Kate Müller',
-        age: 23,
-        occupation: 'Astronaut'
-    },
-    {
-        name: 'Bruce Willis',
-        age: 64,
-        role: 'World saver'
-    }
+  {
+    name: "Max Mustermann",
+    age: 25,
+    occupation: "Chimney sweep",
+  },
+  {
+    name: "Jane Doe",
+    age: 32,
+    role: "Administrator",
+  },
+  {
+    name: "Kate Müller",
+    age: 23,
+    occupation: "Astronaut",
+  },
+  {
+    name: "Bruce Willis",
+    age: 64,
+    role: "World saver",
+  },
 ];
 
 export function logPerson(user: User) {
-    console.log(` - ${user.name}, ${user.age}`);
+  console.log(` - ${user.name}, ${user.age}`);
 }
 
 persons.forEach(logPerson);
